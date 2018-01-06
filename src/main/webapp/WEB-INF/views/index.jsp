@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>demo</title>
-		<link rel="stylesheet" href="css/site.css"></link>
+		<link rel="stylesheet" href="/resources/css/site.css"></link>
 	</head>
 	<body>
 		<div class="container">
@@ -23,7 +23,7 @@
 				<div>
 					Sample form for Provider fields
 				</div>
-				<form action="" class="bodered-image simple-form">
+				<form action="/details" class="bodered-image simple-form">
 					<label for="provFirstName" >First Name</label>
 					<input type="text" name="provFirstName" id="provFirstName">
 					<br>
