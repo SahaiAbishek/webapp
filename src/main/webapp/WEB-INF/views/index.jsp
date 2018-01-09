@@ -23,7 +23,7 @@
 				<div>
 					Sample form for Provider fields
 				</div>
-				<form action="/details" class="bodered-image simple-form">
+				<form method="post" action="/details" class="bodered-image simple-form"  enctype="multipart/form-data">
 					<label for="provFirstName" >First Name</label>
 					<input type="text" name="provFirstName" id="provFirstName">
 					<br>
@@ -38,6 +38,8 @@
 					<br>
 						<label for="searchRadius" >Search Radius</label>
 						<input type="text" name="searchRadius" id="searchRadius">
+					<br>
+					<input type="file" name="myfile" id="myfile" />
 					<br>
 					<input type="submit" name="search">
 				</form>

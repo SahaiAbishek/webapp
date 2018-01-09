@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.UserDaoImpl;
@@ -18,11 +19,11 @@ public class FormController {
 	@Autowired
 	UserDaoImpl userDao;
 	
-	@RequestMapping("/details")
-	public ModelAndView submitdetails(HttpServletRequest request,HttpServletResponse response,@ModelAttribute("user") User user){
+	@RequestMapping(value="/details",method=RequestMethod.POST )
+	public ModelAndView submitdetails(HttpServletRequest request,HttpServletResponse response,@ModelAttribute("user") User user) throws Exception{
 		
 		System.out.println(user.getProvFirstName());
-		System.out.println(user.getProvLastName());
+		System.out.println(user.getMyfile().getOriginalFilename());
 		userDao.addUser(user);
 		return new ModelAndView("index");
 	}
